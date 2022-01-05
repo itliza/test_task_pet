@@ -6,44 +6,37 @@ let day = data.getDay();
 let month = data.getMonth()+1;
 let year = data.getFullYear();
 console.log(`${day}.${month}.${year}`);
+// console.log(data);
 
-orderDate.innerHTML = `${day}.${month}.${year}`;
+// orderDate.innerHTML = `${day}.${month}.${year}`;
+
+// const oneHour = 3600000;
+
+// // let countDay = new Date().getTime() + 10000;
+
+// let countDay = new Date().getTime() + oneHour*2;
 
 
+// let x = setInterval(function() {
 
+    
+//     let now = new Date().getTime();
+    
+//     let distance = countDay - now;
+    
+//     let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+//     	minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+//     	seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+//     document.getElementById("timer_data").innerHTML = hours + "h "
+//     + minutes + "m " + seconds + "s ";
 
-// function startTimer(duration, display) {
-//     var start = Date.now(),
-//         diff,
-//         minutes,
-//         seconds;
-//     function timer() {
-//         // get the number of seconds that have elapsed since 
-//         // startTimer() was called
-//         diff = duration - (((Date.now() - start) / 1000) | 0);
+    
+//     if (distance < 0) {
+//         clearInterval(x);
+//         document.getElementById("timer_data").innerHTML = 'special offer is finished';
+//         document.getElementById("price_old").innerHTML = '';
+//         document.getElementById("price_new").innerHTML = '120 uah';
+//     }
+// }, 1000);
 
-//         // does the same job as parseInt truncates the float
-//         minutes = (diff / 60) | 0;
-//         seconds = (diff % 60) | 0;
-
-//         minutes = minutes < 10 ? "0" + minutes : minutes;
-//         seconds = seconds < 10 ? "0" + seconds : seconds;
-
-//         display.textContent = minutes + ":" + seconds; 
-
-//         if (diff <= 0) {
-//             // add one second so that the count down starts at the full duration
-//             // example 05:00 not 04:59
-//             start = Date.now() + 1000;
-//         }
-//     };
-//     // we don't want to wait a full second before the timer starts
-//     timer();
-//     setInterval(timer, 1000);
-// }
-
-// window.onload = function () {
-//     var fiveMinutes = 60 * 60 * 5,
-//         display = document.querySelector('#time');
-//     startTimer(fiveMinutes, display);
-// };

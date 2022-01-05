@@ -11,6 +11,8 @@ body {
 }
 .container {
   padding: 0 20px;
+  max-width: 1140px;
+  margin: 0 auto;
 }
 .logo_holder {
   background: center / contain no-repeat url(../img/cloud.svg);
@@ -69,7 +71,7 @@ body {
   margin-bottom: 8px;
 }
 .info {
-  margin-bottom: 20pxs;
+  margin-bottom: 20px;
 }
 .info_text {
   margin-bottom: 15px;
@@ -93,8 +95,12 @@ body {
   padding-left: 35px;
 }
 .hero_image {
+  max-width: 450px;
+}
+.hero_image img{
   display: block;
   width: 100%;
+  height: auto;
 }
 .order {
   background: #FDFCFC;
@@ -117,12 +123,11 @@ body {
 }
 .timer_data {
   color: #F6E791;
-  padding: 8px 0 3px;
   font-size: 30px;
   font-weight: 700;
 }
 .price {
-  padding-bottom: 30px;
+  padding: 3px 0 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -200,7 +205,7 @@ body {
 .timer_caption {
   display: block;
   text-align: center;
-  padding-top: 24px;
+  padding: 24px 8px 8px;
   font-size: 24px;
   font-weight: 700;
   color: #483C08;
@@ -252,9 +257,11 @@ body {
   margin: 0 auto;
 }
 .slick-dots {
-  display: flex;
-  justify-content: center;
   margin: 15px 0;
+  text-align: center;
+}
+.slick-dots li {
+  display: inline-block;
 }
 .slick-track {
   display: flex;
@@ -299,13 +306,75 @@ body {
 
 @media only screen
 
-and (min-width: 500px)
+and (min-width: 500px) {
+  .wrapper {
+    padding: ;
+  }
+  .header .container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+  }
+  
+  .nav, .logo_holder {
+    position: static;
+    margin: 0 auto;
+  }
+  .nav {
+    width: 425px;
+    background: none;
 
-and (max-width: 1024px) {
-
+  }
+  .logo_holder {
+    transform: none;
+  }
   .hero {
+    background: center / cover no-repeat url(../img/back.svg);
+
+  }
+  .hero_container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .hero_image, .info {
+    flex-basis: 50%;
+  }
+  .order {
+    flex-basis: 100%;
+    display: flex;
+  }
+  .timer {
+    clip-path: polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%);
+    padding: 20px 40px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+
   }
+  .timer_wrapper {
+    display: flex;
+
+  }
+  .order_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .order_form .btn {
+    width: 200px;
+  }
+
+}
+
+/* desktop */
+
+@media only screen
+
+and (min-width: 1025px) {
+
+ 
 
 }

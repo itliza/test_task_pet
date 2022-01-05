@@ -13,6 +13,8 @@
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script type="text/javascript" src="slick/slick.min.js"></script>
+        <script src="jquery.maskedinput/jquery.maskedinput.min.js"></script>
+
     </head>
     <body>
         <div class="wrapper">
@@ -30,7 +32,7 @@
                 <div class="container">
                      <h2 class="title">Pet Naturals of Vermont, Calming, For Cats</h2>
                      <div class="hero_container">
-                         <img class="hero_image" src="img/cats.png">
+                         <div class="hero_image"><img src="img/cats.png"></div>
                          <div class="info">
                              <p class="info_text">Your cat deserves the best pet supplement the world has to offer. That's what's in the package.</p>
                              <ul class="list">
@@ -43,10 +45,10 @@
                             <div class="timer_wrapper">
                                  <div class="timer">
                                      <strong class="timer_caption">TIME LEFT</strong>
-                                     <span class="timer_data">timer data</span>
+                                     <span class="timer_data" id="timer_data"></span>
                                      <div class="price">
-                                         <span class="price_old">120 uah</span>
-                                         <span class="price_new">60 uah</span>
+                                         <span class="price_old" id="price_old">120 uah</span>
+                                         <span class="price_new" id="price_new">60 uah</span>
                                      </div>
                                  </div>
                             </div>
@@ -55,7 +57,7 @@
                                       <input type="text" name="" placeholder="Name" class="form_input">
                                  </div>
                                  <div class="form_field">
-                                      <input type="tel" name="" class="form_input" placeholder="(0__) - ___ - __ - __">
+                                      <input type="text" id="phone" class="form_input">
                                  </div>
                                  <button type="submit" class="btn">ORDER</button>
                                  <span class="order_date">Order date: <span id="dinamyc_date"></span></span>
@@ -107,7 +109,6 @@
                          <p>We recommend administering Calming chews 30 minutes prior to a stressful event. The 30-minute activation period gives you a chance to increase dosage if you’re not seeing expected results. Calming is safe for unique stress inducing events and for long-term use to help manage everyday stress.</p>
                      </div>
                  </div>
-                 <!-- <div>Registration closes in <span id="time">05:00</span> minutes!</div> -->
              </section>
         </div>
         
@@ -122,14 +123,14 @@
                   arrows: false,
                   responsive: [
                     {
-                      breakpoint: 1240,
+                      breakpoint: 769,
                       settings: {
                         slidesToShow: 2,
                         slidesToScroll: 2,
                       }
                     },
                     {
-                      breakpoint: 940,
+                      breakpoint: 500,
                       settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1
@@ -141,8 +142,10 @@
                   ]
                 });
                 });
+            $(function(){
+              $("#phone").mask("+38(099) 999-99-99");
+            });
         </script>
         <script src="script.js"></script>
-
     </body>
 </html>
